@@ -93,66 +93,74 @@ window.__ModuleLoader__.load({
         'dialog.untitledItem': '未命名',
         'dialog.confirmCount': '删除 {n} 个会话',
         'dialog.confirmStopCount': '停止并删除 {n} 个会话',
+        'dialog.listColon': '：',
+        'activity.turn': '进行中的回合',
+        'activity.subagent': '运行中的子智能体',
+        'activity.job': '运行中的后台任务',
       },
       en: {
-        'menu.delete': 'Delete conversation',
-        'icon.batch': 'Delete conversations in bulk',
-        'batch.title': 'Delete conversations in bulk',
-        'batch.desc': 'Every conversation, grouped by Workspace. Under each row sit its subagents and its forked conversations, expandable level by level. Ticking a row takes everything below it; ticking a subagent alone deletes only that subagent. This cannot be undone.',
-        'batch.loading': 'Reading the conversation list…',
+        'menu.delete': 'Remove session',
+        'icon.batch': 'Remove sessions in bulk',
+        'batch.title': 'Remove sessions in bulk',
+        'batch.desc': 'Every session, grouped by Workspace. Under each row sit its subagents and its forked sessions, expandable level by level. Ticking a row takes everything below it; ticking a subagent alone removes only that subagent. This cannot be undone.',
+        'batch.loading': 'Reading the session list…',
         'batch.failed': 'Could not read the list',
-        'batch.empty': 'No conversation was found.',
+        'batch.empty': 'No session was found.',
         'batch.cancel': 'Cancel',
         'batch.expandAll': 'Expand all',
         'batch.collapseAll': 'Collapse all',
         'batch.partial': '{m} of {n} selected',
         'batch.selectAll': 'Select all ({n})',
-        'batch.workspaceCount': '{n} conversation(s)',
-        'batch.untitled': 'Untitled conversation',
+        'batch.workspaceCount': '{n} session(s)',
+        'batch.untitled': 'Untitled session',
         'batch.ungrouped': 'Ungrouped',
-        'batch.region': 'Conversation list',
+        'batch.region': 'Session list',
         'batch.workspaces': 'Workspaces',
-        'batch.confirmNone': 'Select the conversations to delete',
-        'batch.confirm': 'Delete {n} conversation(s)',
-        'batch.confirmStop': 'Stop and delete {n} conversation(s)',
-        'batch.workspaceAll': 'Select every conversation in this Workspace',
-        'batch.deleting': 'Deleting…',
-        'batch.deletePartial': '{n} failed; the rest were deleted.',
-        'batch.stoppingNote': 'Confirming stops the unfinished work in these conversations first, then deletes them.',
-        'batch.unknown': 'The whole conversation list could not be read; deleting is still possible.',
-        'dialog.title': 'Delete conversation',
-        'dialog.desc': '“{title}” will be deleted permanently: its session log, workspace account and projection cache are removed. This cannot be undone.',
-        'dialog.untitled': 'Untitled conversation',
+        'batch.confirmNone': 'Select the sessions to remove',
+        'batch.confirm': 'Remove {n} session(s)',
+        'batch.confirmStop': 'Stop and remove {n} session(s)',
+        'batch.workspaceAll': 'Select every session in this Workspace',
+        'batch.deleting': 'Removing…',
+        'batch.deletePartial': '{n} failed; the rest were removed.',
+        'batch.stoppingNote': 'Confirming stops the unfinished work in these sessions first, then removes them.',
+        'batch.unknown': 'The whole session list could not be read; removing is still possible.',
+        'dialog.title': 'Remove session',
+        'dialog.desc': '“{title}” will be permanently removed: its session log, workspace account and projection cache go with it. This cannot be undone.',
+        'dialog.untitled': 'Untitled session',
         'dialog.cancel': 'Cancel',
         'dialog.checking': 'Checking…',
-        'dialog.deleting': 'Deleting…',
-        'dialog.failed': 'Delete failed',
-        'dialog.running': 'This conversation still has unfinished work:',
-        'dialog.runningHint': 'Confirming stops that work first, then deletes the conversation.',
-        'dialog.open': 'The Harness still holds it open (it may be showing in a window or tab). Deleting removes it from the list at once.',
-        'dialog.unknown': 'Its current state could not be read; deleting is still possible.',
-        'dialog.descendants': 'Deleted together with it: {list}.',
-        'dialog.descendants.subagents': '{n} subagent conversation(s)',
-        'dialog.descendants.derived': '{n} conversation(s) forked off it',
+        'dialog.deleting': 'Removing…',
+        'dialog.failed': 'Removal failed',
+        'dialog.running': 'This session still has unfinished work:',
+        'dialog.runningHint': 'Confirming stops that work first, then removes the session.',
+        'dialog.open': 'The Harness still holds it open (it may be showing in a window or tab). Removing it takes it off the list at once.',
+        'dialog.unknown': 'Its current state could not be read; removing is still possible.',
+        'dialog.descendants': 'Removed together with it: {list}.',
+        'dialog.descendants.subagents': '{n} subagent session(s)',
+        'dialog.descendants.derived': '{n} session(s) forked off it',
         'dialog.listSeparator': ', ',
         'dialog.group.subagents': 'Subagents',
-        'dialog.group.derived': 'Forked conversations',
+        'dialog.group.derived': 'Forked sessions',
         'dialog.group.subagentsCount': 'Subagents ({n})',
-        'dialog.group.derivedCount': 'Forked conversations ({n})',
+        'dialog.group.derivedCount': 'Forked sessions ({n})',
         'dialog.header.subagents': 'Subagents',
-        'dialog.mainRow': 'This conversation: {title}',
-        'dialog.selectAll': 'Delete all ({n})',
+        'dialog.mainRow': 'This session: {title}',
+        'dialog.selectAll': 'Remove all ({n})',
         'dialog.selectPartial': '{m} of {n} selected',
         'dialog.expandHint': 'Click a group title to collapse it',
         'dialog.truncated': 'There are {n}; only the first {shown} are listed.',
-        'dialog.maxDeletable': 'At most {max} can be deleted at once — select in batches.',
+        'dialog.maxDeletable': 'At most {max} can be removed at once — select in batches.',
         'dialog.itemRunning': 'running',
         'dialog.itemActive': 'has unfinished work',
         'dialog.itemOpen': 'open',
         'dialog.warnings': 'These leads could not be read, so the family may be incomplete:',
         'dialog.untitledItem': 'Untitled',
-        'dialog.confirmCount': 'Delete {n} conversations',
-        'dialog.confirmStopCount': 'Stop and delete {n} conversations',
+        'dialog.confirmCount': 'Remove {n} sessions',
+        'dialog.confirmStopCount': 'Stop and remove {n} sessions',
+        'dialog.listColon': ': ',
+        'activity.turn': 'running turn',
+        'activity.subagent': 'running subagent',
+        'activity.job': 'running background task',
       },
     }
 
@@ -162,19 +170,59 @@ window.__ModuleLoader__.load({
       return text.replace(/\{(\w+)\}/g, (match, name) => (name in params ? String(params[name]) : match))
     }
 
-    /** Translate through the registered locale when there is one, else the zh table. */
-    let translate = null
-    function t(key, params) {
-      if (translate !== null) {
-        try {
-          const value = translate(key, params)
-          if (typeof value === 'string' && value !== '') return value
-        } catch {
-          // A missing key falls through to the local table below.
-        }
+    /**
+     * The locale service, once injected. Read at call time rather than bound
+     * once: a bound translator captured before the stored language arrives (or
+     * whose namespace has no dictionary for the active language) is what made
+     * this dialog fall back to Chinese on a slow startup.
+     */
+    let localeService = null
+
+    /** The language the page is in: the service snapshot, then the browser. */
+    function activeLanguage() {
+      try {
+        const snapshot = localeService?.getSnapshot?.()
+        const active = snapshot?.active
+        const id = typeof active === 'string' ? active : active?.id
+        if (typeof id === 'string' && id !== '') return id.toLowerCase()
+      } catch {
+        // A service that is not ready yet falls through to the browser.
       }
-      const fallback = DICT.zh[key]
-      return typeof fallback === 'string' ? interpolate(fallback, params) : key
+      try {
+        if (typeof navigator !== 'undefined' && typeof navigator.language === 'string') {
+          return navigator.language.toLowerCase()
+        }
+      } catch {
+        // No browser either: English.
+      }
+      return 'en'
+    }
+
+    /**
+     * Pick a dictionary by the page's own language, never by the service's
+     * per-namespace fallback: only a Chinese page gets Chinese copy.
+     */
+    function t(key, params) {
+      const table = activeLanguage().startsWith('zh') ? DICT.zh : DICT.en
+      const value = table[key] ?? DICT.en[key] ?? DICT.zh[key]
+      return typeof value === 'string' ? interpolate(value, params) : key
+    }
+
+    /**
+     * A localized label for one `workspace/session-activity` family. The Host
+     * sends the family `kind` alongside its own Chinese label, so the Client
+     * translates the known kinds itself and keeps the Host label for any kind it
+     * does not know.
+     */
+    function activityLabel(entry) {
+      const kind = typeof entry?.kind === 'string' ? entry.kind : ''
+      if (kind !== '' && kind !== 'unknown') {
+        const key = `activity.${kind}`
+        const localized = t(key)
+        if (localized !== key) return localized
+      }
+      if (typeof entry?.label === 'string' && entry.label !== '') return entry.label
+      return kind
     }
 
     // ---- the pending confirmation, shared by the row and the dialog ----------
@@ -307,7 +355,7 @@ window.__ModuleLoader__.load({
     }
 
     // ---- the menu row -------------------------------------------------------
-    /** One "⋯" menu row (order 500): ask to delete this Session. */
+    /** One "⋯" menu row (order 425, right after Archive): ask to remove this Session. */
     function DeleteSessionMenuItem(props) {
       const { sessionId, displayTitle, useMenuOpenState } = props
       const menuOpenState = typeof useMenuOpenState === 'function' ? useMenuOpenState : null
@@ -597,7 +645,9 @@ window.__ModuleLoader__.load({
         if (state.busy || state.phase !== 'ready') return
         const chosen = items.filter((item) => picked.has(item.id)).map((item) => item.id)
         setState((previous) => ({ ...previous, busy: true, error: null }))
-        deleteSession(request.sessionId, state.stop, chosen).then(
+        // The stop is unconditional: removing a session must never leave its
+        // turn, job or subagent running behind it.
+        deleteSession(request.sessionId, true, chosen).then(
           () => {
             settle()
             setSelected(null)
@@ -659,7 +709,9 @@ window.__ModuleLoader__.load({
                 const names = Array.isArray(entry.items)
                   ? entry.items.map((item) => (item.label === '' ? item.id : item.label)).filter((name) => name !== '')
                   : []
-                return h('li', { key: `${entry.kind}-${index}` }, names.length === 0 ? entry.label : `${entry.label}：${names.join('、')}`)
+                return h('li', { key: `${entry.kind}-${index}` }, names.length === 0
+                  ? activityLabel(entry)
+                  : `${activityLabel(entry)}${t('dialog.listColon')}${names.join(t('dialog.listSeparator'))}`)
               })),
               h('p', { className: 'dsd-noteHint', key: 'hint', children: t('dialog.runningHint') }),
             ]),
@@ -737,7 +789,7 @@ window.__ModuleLoader__.load({
      * currentColor, round joins, on a 16px box.
      */
     const TREE_GLYPHS = {
-      // The conversation itself: a document with a folded corner.
+      // The session itself: a document with a folded corner.
       session: [
         ['path', { d: 'M3.5 2.5H9L12.5 6v7.5h-9z' }],
         ['path', { d: 'M9 2.5V6h3.5' }],
@@ -757,7 +809,7 @@ window.__ModuleLoader__.load({
         ['path', { d: 'M8 7.75A2.125 2.125 0 1 0 8 3.5a2.125 2.125 0 0 0 0 4.25z' }],
         ['path', { d: 'M3.75 13.5c0-2.35 1.9-3.75 4.25-3.75s4.25 1.4 4.25 3.75' }],
       ],
-      // A derived conversation: a chat bubble. Marks the 派生对话 block.
+      // A derived session: a chat bubble. Marks the 派生对话 block.
       chat: [
         ['path', { d: 'M14 10a1.33 1.33 0 0 1-1.33 1.33H4.67L2 14V3.33A1.33 1.33 0 0 1 3.33 2h9.34A1.33 1.33 0 0 1 14 3.33z' }],
       ],
@@ -850,8 +902,8 @@ window.__ModuleLoader__.load({
      * The family tree both dialogs draw.
      *
      * One row per Session, and under every row two collapsible blocks: its direct
-     * 子智能体, then its direct 派生对话. A derived conversation therefore holds
-     * its own subagents, and its own derived conversations, inside its own block
+     * 子智能体, then its direct 派生对话. A derived session therefore holds
+     * its own subagents, and its own derived sessions, inside its own block
      * one step further in, instead of in a second list that only shares a heading
      * with it. The nesting is expressed by the indentation alone: no connectors,
      * no guide lines, so a row's place is read from its indent.
@@ -908,9 +960,8 @@ window.__ModuleLoader__.load({
       const badgesOf = (entry) => {
         const busy = activityOf(entry)
         return [
-          ...busy.map((item) => item.label),
+          ...busy.map((item) => activityLabel(item)),
           ...(busy.length === 0 && entry.running === true ? [t('dialog.itemRunning')] : []),
-          ...(entry.open === true ? [t('dialog.itemOpen')] : []),
         ]
       }
 
@@ -1032,7 +1083,6 @@ window.__ModuleLoader__.load({
       const [state, setState] = useState({ phase: 'idle', catalog: null, error: null, busy: false })
       const [selected, setSelected] = useState(null)
       const [collapsed, setCollapsed] = useState({})
-      const [stop, setStop] = useState(true)
       const dialog = useRef(null)
 
       const close = useCallback(() => {
@@ -1051,7 +1101,6 @@ window.__ModuleLoader__.load({
         setState({ phase: 'loading', catalog: null, error: null, busy: false })
         setSelected(new Set())
         setCollapsed({})
-        setStop(true)
         fetchCatalog().then(
           (catalog) => {
             if (cancelled) return
@@ -1100,6 +1149,16 @@ window.__ModuleLoader__.load({
       const busy = state.busy
       const chosenCount = allIds.filter((id) => picked.has(id)).length
       const allChosen = allIds.length > 0 && chosenCount === allIds.length
+      // Work is always stopped first; only the button says so, and only when
+      // something ticked is actually running.
+      let stopsWork = false
+      for (const group of groups) {
+        const walk = (node) => {
+          if (picked.has(node.id) && activityOf(node.entry).length > 0) stopsWork = true
+          for (const child of node.children) walk(child)
+        }
+        for (const root of buildForest(group.items, null)) walk(root)
+      }
 
       const toggle = (ids, on) => {
         setSelected(() => {
@@ -1135,7 +1194,9 @@ window.__ModuleLoader__.load({
         for (const group of groups) for (const root of buildForest(group.items, null)) collect(root, false)
         if (roots.length === 0) return
         setState((previous) => ({ ...previous, busy: true, error: null }))
-        deleteBatch(roots, stop).then(
+        // Removing a session never leaves its work running: the Host always
+        // stops it first, so the flag is not a choice the user has to make.
+        deleteBatch(roots, true).then(
           (payload) => {
             const failed = Array.isArray(payload?.failed) ? payload.failed : []
             if (failed.length === 0) {
@@ -1302,17 +1363,6 @@ window.__ModuleLoader__.load({
               }),
             ]),
           h('div', { className: 'dsd-footer', key: 'footer' }, [
-            h('label', { className: 'dsd-row dsd-stopRow', key: 'stop' }, [
-              h('input', {
-                type: 'checkbox',
-                key: 'box',
-                className: 'dsd-check',
-                checked: stop,
-                disabled: busy,
-                onChange: () => setStop((previous) => !previous),
-              }),
-              h('span', { className: 'dsd-rowText', key: 'text', children: t('batch.stoppingNote') }),
-            ]),
             h('button', {
               type: 'button',
               className: 'dsd-button dsd-outline',
@@ -1331,7 +1381,7 @@ window.__ModuleLoader__.load({
                 ? t('batch.deleting')
                 : chosenCount === 0
                   ? t('batch.confirmNone')
-                  : stop
+                  : stopsWork
                     ? t('batch.confirmStop', { n: chosenCount })
                     : t('batch.confirm', { n: chosenCount }),
             }),
@@ -1361,7 +1411,7 @@ window.__ModuleLoader__.load({
 .dsd-tree{display:flex;flex-direction:column;gap:2px;padding:6px 0;border-block:.5px solid var(--dsw-alias-border-l1,rgba(127,127,127,.2))}
 .dsd-row{display:flex;align-items:center;gap:8px;padding:4px 6px;border-radius:var(--dsw-radius-sm,6px);cursor:pointer}
 .dsd-row:hover{background:var(--dsw-alias-interactive-bg-hover,rgba(127,127,127,.12))}
-.dsd-check{flex:none;width:14px;height:14px;margin:0;accent-color:var(--dsw-alias-state-error-primary,#e5484d);cursor:pointer}
+.dsd-check{flex:none;width:14px;height:14px;margin:0;accent-color:var(--dsw-alias-state-business-primary,#4a8cff);cursor:pointer}
 .dsd-rowText{flex:1;min-width:0;display:flex;align-items:baseline;gap:6px;font-size:13px;line-height:20px;color:var(--dsw-alias-label-primary,#e6e6e6)}
 .dsd-rowTitle{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .dsd-rowId{flex:none;font-size:11px;color:var(--dsw-alias-label-secondary,#a8adb7)}
@@ -1393,7 +1443,8 @@ window.__ModuleLoader__.load({
 .dsd-descendants{padding:8px 12px;border-radius:var(--dsw-radius-md,8px);border:.5px solid var(--dsw-alias-state-warn-primary,#d9a03a);color:var(--dsw-alias-label-primary,#e6e6e6)}
 .dsd-error{margin:0;font-size:13px;line-height:20px;color:var(--dsw-alias-state-error-primary,#e5484d);word-break:break-word}
 .dsd-footer{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:8px}
-.dsd-button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 14px;border-radius:var(--dsw-radius-md,8px);cursor:pointer;font:inherit;font-size:14px;line-height:22px;color:var(--dsw-alias-label-primary,#e6e6e6);background:transparent}
+.dsd-button{box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;height:36px;padding:0 14px;border:0;border-radius:var(--dsw-radius-md,8px);cursor:pointer;font:inherit;font-size:14px;line-height:22px;color:var(--dsw-alias-label-primary,#e6e6e6);background:transparent}
+.dsd-button:focus-visible{outline:var(--dsw-focus-ring-width,2px) solid var(--dsw-focus-ring-color,var(--dsw-alias-state-business-primary,#4a8cff));outline-offset:2px}
 .dsd-button:disabled{cursor:not-allowed;opacity:.4}
 .dsd-outline{border:.5px solid var(--dsw-alias-border-l2,rgba(127,127,127,.32))}
 .dsd-outline:hover:not(:disabled){background:var(--dsw-alias-interactive-bg-hover,rgba(127,127,127,.12))}
@@ -1445,16 +1496,19 @@ window.__ModuleLoader__.load({
     }
 
     return {
-      inject: ['slots'],
+      // `locale` is injected rather than merely looked up: the service may load
+      // after this plugin, and binding while it was absent left every string on
+      // the dictionary's fallback language for the rest of the page's life.
+      inject: ['slots', 'locale'],
       apply(ctx) {
         const locale = ctx.get('locale')
-        if (locale !== undefined && typeof locale.register === 'function' && typeof locale.bind === 'function') {
+        localeService = locale ?? null
+        if (locale !== undefined && typeof locale.register === 'function') {
           ctx.effect(() => locale.register(NS, { zh: DICT.zh, en: DICT.en }), 'better-dsh-session-deletetool: locale')
-          translate = locale.bind(NS)
         }
         ctx.slots.inject('sidebar.workspaces.session.menu.item', () =>
           ctx.slots.register(
-            { name: 'sidebar.workspaces.session.menu.item', id: 'better-dsh-session-deletetool', order: 500, locale: NS },
+            { name: 'sidebar.workspaces.session.menu.item', id: 'better-dsh-session-deletetool', order: 425, locale: NS },
             WithStyles(DeleteSessionMenuItem),
           ),
         )

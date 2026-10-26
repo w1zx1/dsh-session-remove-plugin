@@ -390,7 +390,12 @@ async function buildCatalog(ctx) {
     const header = record?.header
     if (header !== undefined && typeof header.id === 'string' && SESSION_ID.test(header.id)) headers.push(header)
   }
-  await attachTitles(ctx, headers)
+  // The sidebar browses conversations, not drafts: a blank Session of its own —
+  // one whose first turn never started — is hidden there unless it is the one
+  // being edited. Listing it here would invent a row named after its directory.
+  const blank = blankSessionIds(ctx, headers)
+  const listed = blank.size === 0 ? headers : headers.filter((header) => !blank.has(header.id))
+  await attachTitles(ctx, listed)
 
   const registry = ctx.get('workspaceRegistry')
   const workspaces = registry !== undefined && typeof registry.list === 'function' ? registry.list() : []
@@ -407,7 +412,7 @@ async function buildCatalog(ctx) {
   }
 
   const groups = new Map()
-  for (const header of headers) {
+  for (const header of listed) {
     const owned = ownerOf.get(header.id)
     const workspace = owned === undefined
       ? undefined
@@ -449,7 +454,7 @@ async function buildCatalog(ctx) {
     workspaces: sections,
     totals: {
       workspaces: sections.length,
-      sessions: headers.length,
+      sessions: listed.length,
       ungrouped: ungrouped === undefined ? 0 : ungrouped.members.length,
     },
   }
@@ -1031,6 +1036,37 @@ function workspaceTitleOf(path) {
   const trimmed = path.replace(/[/\\]+$/, '')
   const separator = Math.max(trimmed.lastIndexOf('/'), trimmed.lastIndexOf('\\'))
   return trimmed.slice(separator + 1)
+}
+
+/**
+ * The ids of the Sessions the sidebar keeps hidden as drafts.
+ *
+ * A Session stays "blank" until its first turn starts; that flag lives in the
+ * `sessionListMetadata` list projection the shipped sidebar renders from, so
+ * reading it back from the projection cache costs no log I/O. A Session without
+ * a cached row stays listed: a cache that has not caught up must never hide a
+ * real conversation.
+ * @param {object} ctx - Host Cordis context.
+ * @param {object[]} headers - the Session headers.
+ * @returns {Set<string>} the ids that are still blank.
+ */
+function blankSessionIds(ctx, headers) {
+  const blank = new Set()
+  if (headers.length === 0) return blank
+  const storageDomain = ctx.get('storageDomain')
+  const domain = typeof storageDomain?.get === 'function' ? storageDomain.get('session_projcache') : undefined
+  const table = typeof domain?.table === 'function' ? domain.table('sessions') : undefined
+  if (typeof table?.get !== 'function') return blank
+  for (const header of headers) {
+    try {
+      const cached = table.get(header.id)
+      const rows = cached?.record?.rows ?? cached?.rows
+      if (rows?.sessionListMetadata?.val?.blank === true) blank.add(header.id)
+    } catch {
+      // A missing or malformed cache row leaves the Session listed.
+    }
+  }
+  return blank
 }
 
 /**
